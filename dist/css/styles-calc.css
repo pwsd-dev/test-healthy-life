@@ -2,6 +2,8 @@
   height: 500px;
 }
 
+/*some*/
+
 .header-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -11,13 +13,41 @@
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 0.78125vw 1.04167vw;
+  border-radius: 2.60417vw;
 }
 
-.left {
-  width: 300px;
+.page__link {
+  margin: 0vw 0.96354vw;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
 }
 
-/*some*/
+.page__link:hover {
+  color: #1E88E5;
+  -webkit-transition: .2s ease-in-out;
+  transition: .2s ease-in-out;
+}
+
+.mid {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.page__btn-1 {
+  margin-left: 3.125vw;
+}
 
 .page__text {
   font-size: 30px;
@@ -42,12 +72,65 @@
   clip-path: polygon(0 0, 0% 100%, 19% 100%);
 }
 
+.page a {
+  text-decoration: none;
+}
+
 .page__title-h1 {
   font-family: Poppins-Bold;
   font-size: 3.38542vw;
   line-height: 5.07812vw;
 }
 
+.page__text-20-medium {
+  font-family: Poppins-Medium;
+  font-size: 1.04167vw;
+}
+
+.page__text-20-regular {
+  font-family: Poppins-Regular;
+  font-size: 1.04167vw;
+}
+
+.page__link {
+  color: #252525;
+}
+
+.page__btn-1 {
+  font-family: Poppins-Semibold;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-decoration: none;
+  height: 52px;
+  padding: 11px 43px;
+  font-size: 20px;
+  color: #fff;
+  border: transparent;
+  background-color: #1E88E5;
+  border-radius: 30px;
+}
+
 body {
   margin: 10px;
+}
+
+@media screen and (max-width: 1512px) {
+  .page__text-20-medium {
+    font-size: 20px;
+  }
+
+  .page__text-20-regular {
+    font-size: 20px;
+  }
 }
