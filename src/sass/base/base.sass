@@ -1,0 +1,47 @@
++reset()
+/* __reset__ */
+/* __base__ */
+.wrapper
+  +wrapper()
+  +scrollbar($color_scrollbar-track, $color_scrollbar-thumb)
+  +tv-block
+    max-width: calc(100vw - 120px)
+  +lgs-block
+    max-width: calc(100vw - 120px)
+  // +sm-block
+  //   max-width: 1200px
+@font-face
+  +font($font, $fontBold)
+
+@font-face
+  +font($font, $fontRegular)
+
+@font-face
+  +font($font, $fontRegular)
+
+@font-face
+  +font(Cookie, Cookie-Regular)
+@font-face
+  +font(Poppins, Poppins-Regular)
+@font-face
+  +font(Poppins, Poppins-Medium)
+@font-face
+  +font(Poppins, Poppins-Bold)
+@font-face
+  +font(Poppins, Poppins-Semibold)
+@font-face
+  +font(Poppins, Poppins-Regular)
+
+body
+  font-family: $fontRegular
+  background: #fff
+
+a, button
+  cursor: pointer
+  &:focus
+    outline: none
+
+input
+  cursor: text
+  &:focus
+    outline: none

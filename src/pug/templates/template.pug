@@ -1,0 +1,18 @@
+doctype html
+html(lang="ru") 
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="x-ua-compatible", content="ie=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        link(rel="icon", type="image/x-icon",  href="assets/img/favicon.ico")
+        block base
+        block title
+        block style
+            link(rel="stylesheet", href="css/base-styles.css", type="text/css")
+    body
+        block content
+        block style
+            link(rel="stylesheet", href="css/styles-calc.css", type="text/css")
+            link(rel="stylesheet", href="css/styles-sprites.css", type="text/css")
+        block script
+            script(src="js/main.js")

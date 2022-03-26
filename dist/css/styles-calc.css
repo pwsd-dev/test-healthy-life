@@ -1,0 +1,53 @@
+.footer {
+  height: 500px;
+}
+
+.header-wrapper {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.left {
+  width: 300px;
+}
+
+/*some*/
+
+.page__text {
+  font-size: 30px;
+  font-family: "Cookie-Regular";
+}
+
+.banner {
+  height: 961px;
+  background-color: #F2FAFA;
+  position: relative;
+  padding-top: 51px;
+}
+
+.banner .figure {
+  position: absolute;
+  bottom: 0px;
+  background-color: black;
+  background-color: #fff;
+  height: 200px;
+  width: 100%;
+  -webkit-clip-path: polygon(0 0, 0% 100%, 19% 100%);
+  clip-path: polygon(0 0, 0% 100%, 19% 100%);
+}
+
+.page__title-h1 {
+  font-family: Poppins-Bold;
+  font-size: 3.38542vw;
+  line-height: 5.07812vw;
+}
+
+body {
+  margin: 10px;
+}

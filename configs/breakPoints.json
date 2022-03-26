@@ -1,0 +1,24 @@
+{
+  "viewportWidth": 2500,
+  "breakPoints": {
+    "tv": {
+      "width": "2570px"
+    },
+    "lgs": {
+      "width": "1940px"
+    },
+    "lg": {
+      "width": "1445px"
+    },
+    "md": {
+      "width": "992px"
+    },
+    "sm": {
+      "width": "768px",
+      "fields": "15px"
+    },
+    "xs": {
+      "width": "578px"
+    }
+  }
+}
