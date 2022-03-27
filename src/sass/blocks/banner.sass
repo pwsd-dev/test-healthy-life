@@ -1,17 +1,73 @@
 .banner
-    // background-color: #1E88E5
-    // background-image: url("../assets/images/png/background-banner.png")
-    // background-size: cover
-    // height: 900px
-    height: 961px
     background-color: #F2FAFA
     position: relative
-    padding-top: 51px
+    padding-top: 15px
+
+    +Biggest-block
+        padding-bottom: 430px
+    +tv-block
+        padding-bottom: 330px
+    +lgs-block
+        padding-bottom: 230px
+    +lg-block
+        padding-bottom: 190px
     .figure
         position: absolute
         bottom: 0px
-        background-color: black
         background-color: #fff
         height: 200px
         width: 100%
         clip-path: polygon(0 0, 0% 100%, 19% 100%)
+    .figure-second
+        position: absolute
+        bottom: -35px
+        background-color: #fff
+        height: 200px
+        width: 100%
+        clip-path: polygon(76% 72%, 100% 100%, 100% 80%)
+
+.banner-content-wrapper
+    display: flex
+    justify-content: space-around
+    margin-top: vw(15)
+    +Biggest-block
+        justify-content: space-evenly
+    .left
+        width: 689px
+        margin-top: vw(129)
+    .page__text-24-regular
+        opacity: .6
+        margin-bottom: vw(84)
+        // max-width: 588px
+    .page__title-h1
+        margin-bottom: vw(37)
+    .row
+        display: flex
+        justify-content: space-between
+    .page__btn-2
+        margin-right:
+        width: 250px
+
+.form-banner
+    display: flex
+    position: relative
+    input
+        border: transparent
+        height: 76px
+        width: 400px
+        border-radius: 10px
+        &::placeholder
+            font-family: Poppins-Regular
+            color: #9D9D9D
+            padding-left: 15px
+    button
+        background: transparent
+        border: transparent
+        position: absolute
+        right: 10px
+        top: 12px
+        width: 50px
+        height: 50px
+        background-image: url(../assets/images/png/search.svg)
+        background-size: cover
+        background-repeat: no-repeat

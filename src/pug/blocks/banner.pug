@@ -1,5 +1,15 @@
 section.banner
     .figure
+    .figure-second
     .wrapper
-        include ../../components/header/header.component.pug
-        .page__title-h1 Are you looking for Freelancers?
+        .banner-content-wrapper
+            .left
+                h1.page__title-h1 Are you looking for Freelancers?
+                p.page__text-24-regular Hire Great Freelancers, Fast. Spacelance helps you hire elite freelancers at a moment's notice
+                .row
+                    button.page__btn-2 Hire a freelancer
+                    form.form-banner
+                        input(type="search" placeholder="search freelance work")
+                        button(type="submit")
+            .right
+                img(src="assets/images/png/Working-remotely.png")

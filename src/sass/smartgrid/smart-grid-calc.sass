@@ -1,14 +1,16 @@
 $columns: 12
 $atom: (100% / $columns)
 
+$break_Biggest: 3000px
 $break_tv: 2570px
 $break_lgs: 1940px
-$break_lg: 1512px
+$break_lg: 1562px
 $break_md: 992px
 $break_sm: 768px
 $break_xs: 578px
 
 $offset: 18px
+$offset_Biggest: $offset
 $offset_tv: $offset
 $offset_lgs: $offset
 $offset_lg: $offset
@@ -17,6 +19,7 @@ $offset_sm: $offset
 $offset_xs: $offset
 
 $offset_one_side: ($offset / 2)
+$offset_Biggest_one_side: ($offset_Biggest / 2)
 $offset_tv_one_side: ($offset_tv / 2)
 $offset_lgs_one_side: ($offset_lgs / 2)
 $offset_lg_one_side: ($offset_lg / 2)
@@ -80,6 +83,10 @@ $fields_sm: 15px
     $val: 100% / $columns * $n
     width: #{calc(#{$val} - #{$offset})}
 
+=size-Biggest($n)
+    $val: 100% / $columns * $n
+    +Biggest(width, #{calc(#{$val} - #{$offset_Biggest})})
+
 =size-tv($n)
     $val: 100% / $columns * $n
     +tv(width, #{calc(#{$val} - #{$offset_tv})})
@@ -129,6 +136,32 @@ $fields_sm: 15px
 =shift-padding-right($n)
     $val: 100% / $columns * $n
     padding-right: #{calc(#{$val} + #{$offset_one_side})}
+
+=shift-Biggest($n)
+    $val: 100% / $columns * $n
+    +Biggest(margin-left, #{calc(#{$val} + #{$offset_Biggest_one_side})})
+    +Biggest(margin-right, #{calc(#{$val} + #{$offset_Biggest_one_side})})
+
+=shift-Biggest-left($n)
+    $val: 100% / $columns * $n
+    +Biggest(margin-left, #{calc(#{$val} + #{$offset_Biggest_one_side})})
+
+=shift-Biggest-right($n)
+    $val: 100% / $columns * $n
+    +Biggest(margin-right, #{calc(#{$val} + #{$offset_Biggest_one_side})})
+
+=shift-Biggest-padding($n)
+    $val: 100% / $columns * $n
+    +Biggest(padding-left, #{calc(#{$val} + #{$offset_Biggest_one_side})})
+    +Biggest(padding-right, #{calc(#{$val} + #{$offset_Biggest_one_side})})
+
+=shift-Biggest-padding-left($n)
+    $val: 100% / $columns * $n
+    +Biggest(padding-left, #{calc(#{$val} + #{$offset_Biggest_one_side})})
+
+=shift-Biggest-padding-right($n)
+    $val: 100% / $columns * $n
+    +Biggest(padding-right, #{calc(#{$val} + #{$offset_Biggest_one_side})})
 
 =shift-tv($n)
     $val: 100% / $columns * $n
@@ -285,6 +318,14 @@ $fields_sm: 15px
 =shift-xs-padding-right($n)
     $val: 100% / $columns * $n
     +xs(padding-right, #{calc(#{$val} + #{$offset_xs_one_side})})
+
+=Biggest($name, $value)
+    @media screen and (max-width: $break_Biggest)
+        #{$name}: $value
+
+=Biggest-block()
+    @media screen and (max-width: $break_Biggest)
+        @content
 
 =tv($name, $value)
     @media screen and (max-width: $break_tv)

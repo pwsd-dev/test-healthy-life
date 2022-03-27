@@ -1,6 +1,9 @@
 {
   "viewportWidth": 2500,
   "breakPoints": {
+    "Biggest": {
+      "width": "3000px"
+    },
     "tv": {
       "width": "2570px"
     },
@@ -8,7 +11,7 @@
       "width": "1940px"
     },
     "lg": {
-      "width": "1512px"
+      "width": "1562px"
     },
     "md": {
       "width": "992px"
