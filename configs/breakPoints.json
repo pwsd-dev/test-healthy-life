@@ -8,10 +8,19 @@
       "width": "2570px"
     },
     "lgs": {
-      "width": "1940px"
+      "width": "1945px"
     },
     "lg": {
       "width": "1562px"
+    },
+    "laptopM": {
+      "width": "1445px"
+    },
+    "laptopMini": {
+      "width": "1200px"
+    },
+    "ipad": {
+      "width": "1024px"
     },
     "md": {
       "width": "992px"

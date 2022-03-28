@@ -1,5 +1,6 @@
 .freelance-works
     padding-top: 170px
+    padding-bottom: 73px
     min-width: 0px
     position: relative
     span
@@ -15,25 +16,15 @@
     position: relative
     z-index: 100
     min-width: 0px
-    height: 700px
     max-width: 1300px
     margin: 0 auto
 
     .slick-list
         overflow: hidden
-        // min-width: 0
-        height: 500px
+
     .slick-track
         display: flex
-        // justify-content: space-between
         min-width: 0
-
-    .slick-arrow
-        // display: flex
-        z-index: 200
-
-    .slick-dots li
-        list-style: none
     .slick-slide
         min-width: 0
 
@@ -46,6 +37,9 @@
         margin-right: 76px
         padding: 20px 20px
         box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+        z-index: 4000
+        border-radius: 30px
+
     .page__img
         text-align: center
         margin: 0 auto 30px auto
@@ -82,6 +76,7 @@
     transform: rotate(180deg)
     border-radius: 50%
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+    transition: .2s ease-in-out
 
     img
         position: relative
@@ -95,6 +90,7 @@
         background-color: #1E88E5
         box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
         z-index: 200
+        transition: .2s ease-in-out
         img
             filter: brightness(10)
 
@@ -107,12 +103,13 @@
     z-index: 100
     border-radius: 50%
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+    transition: .2s ease-in-out
     img
         position: relative
         left: 13px
         top: 14px
     &:hover
-
+        transition: .2s ease-in-out
         background-repeat: no-repeat
         background-position: center
         background-color: #1E88E5

@@ -11,7 +11,7 @@ $jq(document).ready(function () {
     autoplay: false,
     infinite: true,
     speed: 1800,
-    // adaptiveHeight: true,
+    adaptiveHeight: true,
     pauseOnFocus: true,
     pauseOnHover: true,
     pauseOnDotsHover: true,

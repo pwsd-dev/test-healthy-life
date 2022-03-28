@@ -249,7 +249,7 @@ input:focus {
   }
 }
 
-@media screen and (max-width: 1940px) {
+@media screen and (max-width: 1945px) {
   .wrapper {
     max-width: -webkit-calc(100vw - 120px);
     max-width: calc(100vw - 120px);
