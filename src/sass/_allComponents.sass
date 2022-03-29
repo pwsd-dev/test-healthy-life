@@ -236,6 +236,141 @@
         .page__img
             margin-right: 13px
 
+.freelance-works
+    padding-top: 170px
+    padding-bottom: 73px
+    min-width: 0px
+    position: relative
+    +laptopMini-block
+        padding-top: 100px
+        padding-bottom: 43px
+    +xs-block
+        padding-top: 70px
+    span
+        color: #1E88E5
+        min-width: 0
+    .descr
+        padding-left: vw(70)
+        margin-bottom: 75px
+        min-width: 0px
+
+.slider-freelance
+    background: transparent
+    position: relative
+    z-index: 100
+    min-width: 0px
+    max-width: 1300px
+    margin: 0 auto
+    .slick-arrow
+        +xs-block
+            display: none!important
+    .slick-list
+        overflow: hidden
+
+    .slick-track
+        display: flex
+        min-width: 0
+    .slick-slide
+        min-width: 0
+
+    .slide
+        max-width: 372px
+        min-width: 0px
+        display: flex
+        flex-direction: column
+        align-items: center
+        margin-right: 76px
+        padding: 20px 20px
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+        z-index: 4000
+        border-radius: 30px
+
+    .page__img
+        text-align: center
+        margin: 0 auto 30px auto
+    .page__text-32-Medium
+        margin-bottom: 10px
+        min-width: 0px
+    .page__text-24-regular-grey
+        max-width: 331px
+        text-align: center
+        margin-bottom: 30px
+        min-width: 0px
+    .row-slide
+        min-width: 0px
+        display: flex
+        justify-content: space-between
+        align-items: center
+        min-width: 0px
+        .page__text-24-Medium
+            max-width: 137px
+            text-align: center
+            min-width: 0px
+        a
+            color: #1E88E5
+            text-decoration: underline
+            margin-left: 60px
+            min-width: 0px
+#nextArrow
+    width: 62px
+    height: 62px
+    position: absolute
+    top: 17.8%
+    right: 10%
+    z-index: 100
+    transform: rotate(180deg)
+    border-radius: 50%
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+    transition: .2s ease-in-out
+    +ipad-block
+        display: none!important
+
+    +xs-block
+        display: none!important
+    img
+        position: relative
+        left: 13px
+        top: 15px
+
+    &:hover
+        transform: rotate(180deg)
+        background-repeat: no-repeat
+        background-position: center
+        background-color: #1E88E5
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+        z-index: 200
+        transition: .2s ease-in-out
+        img
+            filter: brightness(10)
+
+#prevArrow
+    width: 62px
+    height: 62px
+    position: absolute
+    top: 18%
+    right: 18%
+    z-index: 100
+    border-radius: 50%
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+    transition: .2s ease-in-out
+    +ipad-block
+        display: none!important
+
+    +xs-block
+        display: none!important
+    img
+        position: relative
+        left: 13px
+        top: 14px
+    &:hover
+        transition: .2s ease-in-out
+        background-repeat: no-repeat
+        background-position: center
+        background-color: #1E88E5
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
+        img
+            filter: brightness(10)
+
 .header-wrapper
     display: flex
     justify-content: space-between
@@ -420,138 +555,3 @@
 
         &.active
             opacity: 1
-
-.freelance-works
-    padding-top: 170px
-    padding-bottom: 73px
-    min-width: 0px
-    position: relative
-    +laptopMini-block
-        padding-top: 100px
-        padding-bottom: 43px
-    +xs-block
-        padding-top: 70px
-    span
-        color: #1E88E5
-        min-width: 0
-    .descr
-        padding-left: vw(70)
-        margin-bottom: 75px
-        min-width: 0px
-
-.slider-freelance
-    background: transparent
-    position: relative
-    z-index: 100
-    min-width: 0px
-    max-width: 1300px
-    margin: 0 auto
-    .slick-arrow
-        +xs-block
-            display: none!important
-    .slick-list
-        overflow: hidden
-
-    .slick-track
-        display: flex
-        min-width: 0
-    .slick-slide
-        min-width: 0
-
-    .slide
-        max-width: 372px
-        min-width: 0px
-        display: flex
-        flex-direction: column
-        align-items: center
-        margin-right: 76px
-        padding: 20px 20px
-        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
-        z-index: 4000
-        border-radius: 30px
-
-    .page__img
-        text-align: center
-        margin: 0 auto 30px auto
-    .page__text-32-Medium
-        margin-bottom: 10px
-        min-width: 0px
-    .page__text-24-regular-grey
-        max-width: 331px
-        text-align: center
-        margin-bottom: 30px
-        min-width: 0px
-    .row-slide
-        min-width: 0px
-        display: flex
-        justify-content: space-between
-        align-items: center
-        min-width: 0px
-        .page__text-24-Medium
-            max-width: 137px
-            text-align: center
-            min-width: 0px
-        a
-            color: #1E88E5
-            text-decoration: underline
-            margin-left: 60px
-            min-width: 0px
-#nextArrow
-    width: 62px
-    height: 62px
-    position: absolute
-    top: 17.8%
-    right: 10%
-    z-index: 100
-    transform: rotate(180deg)
-    border-radius: 50%
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
-    transition: .2s ease-in-out
-    +ipad-block
-        display: none!important
-
-    +xs-block
-        display: none!important
-    img
-        position: relative
-        left: 13px
-        top: 15px
-
-    &:hover
-        transform: rotate(180deg)
-        background-repeat: no-repeat
-        background-position: center
-        background-color: #1E88E5
-        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
-        z-index: 200
-        transition: .2s ease-in-out
-        img
-            filter: brightness(10)
-
-#prevArrow
-    width: 62px
-    height: 62px
-    position: absolute
-    top: 18%
-    right: 18%
-    z-index: 100
-    border-radius: 50%
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
-    transition: .2s ease-in-out
-    +ipad-block
-        display: none!important
-
-    +xs-block
-        display: none!important
-    img
-        position: relative
-        left: 13px
-        top: 14px
-    &:hover
-        transition: .2s ease-in-out
-        background-repeat: no-repeat
-        background-position: center
-        background-color: #1E88E5
-        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
-        img
-            filter: brightness(10)
