@@ -3,6 +3,11 @@
     padding-bottom: 73px
     min-width: 0px
     position: relative
+    +laptopMini-block
+        padding-top: 100px
+        padding-bottom: 43px
+    +xs-block
+        padding-top: 70px
     span
         color: #1E88E5
         min-width: 0
@@ -18,7 +23,9 @@
     min-width: 0px
     max-width: 1300px
     margin: 0 auto
-
+    .slick-arrow
+        +xs-block
+            display: none!important
     .slick-list
         overflow: hidden
 
@@ -77,7 +84,11 @@
     border-radius: 50%
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
     transition: .2s ease-in-out
+    +ipad-block
+        display: none!important
 
+    +xs-block
+        display: none!important
     img
         position: relative
         left: 13px
@@ -99,11 +110,16 @@
     height: 62px
     position: absolute
     top: 18%
-    right: 15%
+    right: 18%
     z-index: 100
     border-radius: 50%
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
     transition: .2s ease-in-out
+    +ipad-block
+        display: none!important
+
+    +xs-block
+        display: none!important
     img
         position: relative
         left: 13px

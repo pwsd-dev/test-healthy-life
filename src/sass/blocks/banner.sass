@@ -11,6 +11,12 @@
         padding-bottom: 230px
     +lg-block
         padding-bottom: 190px
+    +laptopMini-block
+        padding-bottom: 230px
+    +sm-block
+        width: 100%
+    +xs-block
+        padding-bottom: 200px
     .figure
         position: absolute
         bottom: 0px
@@ -32,31 +38,60 @@
     margin-top: vw(15)
     +Biggest-block
         justify-content: space-evenly
+    +sm-block
+        flex-direction: column
     .left
         width: 689px
         margin-top: vw(129)
+        +sm-block
+            width: 100%
+
+    .right
+        +laptopMini-block
+            width: 40%
+        +ipad-block
+            display: none
+
     .page__text-24-regular
         opacity: .6
         margin-bottom: vw(84)
+        +ipad-block
+            margin-bottom: vw(177)
         // max-width: 588px
     .page__title-h1
         margin-bottom: vw(37)
+        +ipad-block
+            margin-bottom: vw(47)
+        +xs-block
+            margin-bottom: 20px
     .row
         display: flex
         justify-content: space-between
+        +sm-block
+            flex-direction: column
     .page__btn-2
         margin-right:
         width: 250px
         margin-right: 15px
+        +sm-block
+            margin-bottom: 30px
+            width: 450px
+        +xs-block
+            width: 100%
 
 .form-banner
     display: flex
     position: relative
+
     input
         border: transparent
         height: 76px
         width: 400px
         border-radius: 10px
+        +sm-block
+            width: 500px
+        +xs-block
+            width: 100%
         &::placeholder
             font-family: Poppins-Regular
             color: #9D9D9D
@@ -72,3 +107,12 @@
         background-image: url(../assets/images/png/search.svg)
         background-size: cover
         background-repeat: no-repeat
+        +sm-block
+            right: 100px
+        +smM-block
+            right: 50px
+        +xs-block
+            width: 30px
+            height: 30px
+            right: 5px
+            top: 22px

@@ -224,6 +224,10 @@ body {
   background: #fff;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 a,
 button {
   cursor: pointer;
@@ -260,5 +264,19 @@ input:focus {
   .wrapper {
     padding-left: 15px;
     padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 668px) {
+  .wrapper {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .wrapper {
+    max-width: -webkit-calc(100vw - 20px);
+    max-width: calc(100vw - 20px);
   }
 }

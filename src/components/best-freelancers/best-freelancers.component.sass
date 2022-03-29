@@ -1,25 +1,65 @@
 .best-freelancers
     padding-top: 280px
+    +ipad-block
+        padding-top: 0
 .best-freelancers-wrapper
     display: flex
     justify-content: space-evenly
+    +laptopMini-block
+        flex-direction: column
     .left
         width: 45%
         position: relative
+
+        +laptopMini-block
+            width: 100%
+        +smM-block
+            display: none
+        +xs-block
+            display: none
+        .page__img
+            +Biggest-block
+                position: relative
+                top: 170px
+                left: 150px
+            +lgs-block
+                top: 0
+                left: 0
+            +laptopMd-block
+                position: relative
+                top: 100px
+
+            +laptopMini-block
+                top: 0px
     .right
         width: 40%
         display: flex
         flex-direction: column
         padding-top: 20px
+        margin-left: 50px
+        +laptopMd-block
+            margin-left: 50px
+        +laptopMini-block
+            width: 100%
+            margin-top: 50px
+            margin-left: 0px
+            justify-content: center
+        +xs-block
+            margin-top: 0
         .page__text-56-Medium
             text-align: right
             margin-bottom: 20px
+            +laptopMini-block
+                text-align: center
+                margin-bottom: 40px
             span
                 color: #1E88E5
         .page__text-24-regular-grey
             max-width: 516px
             align-self: flex-end
             text-align: center
+            +laptopMini-block
+                align-self: center
     .best-freelancers-item-top
         position: absolute
         top: 7%
@@ -35,6 +75,14 @@
             top: 0
         +lg-block
             top: 0
+        +laptopMd-block
+            top: 100px
+        +laptopMdMn-block
+            top: 50px
+        +laptopMini-block
+            top: 0px
+            left: 350px
+
         .page__text-36-Semibold
             color: #1E88E5
             text-align: center
@@ -47,13 +95,24 @@
         display: flex
         flex-direction: column
         align-items: center
+        justify-content: center
         border-radius: 20px
         width: 297px
+        +Biggest-block
+            bottom: 30%
+        +lgs-block
+            bottom: 40%
         +lg-block
             left: 60%
         +laptopM-block
             left: 53%
-            width: 297px
+            bottom: 40%
+        +laptopMd-block
+            bottom: 20%
+        +laptopMdMn-block
+            bottom: 37%
+        +laptopMini-block
+            bottom: 45%
         .page__text-36-Semibold
             color: #1E88E5
             text-align: center

@@ -16,8 +16,14 @@
     "laptopM": {
       "width": "1445px"
     },
+    "laptopMd": {
+      "width": "1390px"
+    },
+    "laptopMdMn": {
+      "width": "1300px"
+    },
     "laptopMini": {
-      "width": "1200px"
+      "width": "1250px"
     },
     "ipad": {
       "width": "1024px"
@@ -25,8 +31,15 @@
     "md": {
       "width": "992px"
     },
+    "fabletMid": {
+      "width": "840px"
+    },
     "sm": {
       "width": "768px",
+      "fields": "15px"
+    },
+    "smM": {
+      "width": "668px",
       "fields": "15px"
     },
     "xs": {

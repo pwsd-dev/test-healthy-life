@@ -28,8 +28,21 @@
         +laptopM-block
             width: 1067px
         +laptopMini-block
-            width: 967px
+            width: 867px
             padding: 21px 23px
+        +ipad-block
+            bottom: 100px
+            position: relative
+            max-width: 600px
+            flex-wrap: wrap
+            justify-content: space-evenly
+            padding: 61px 63px
+        +fabletMid-block
+            padding: 31px 33px
+        +sm-block
+            width: 100%
+            padding: 0
+            padding-top: 30px
         .page__text-30-Medium
             text-align: center
         .page__text-24-regular-grey
@@ -40,33 +53,132 @@
     justify-content: center
     align-items: center
     width: 305px
+    +ipad-block
+        margin-bottom: 50px
+
     .page__img
         margin-bottom: 15px
     .page__text-30-Medium
         margin-bottom: 10px
 
+.footer
+    padding: 133px 0 153px
+    +fabletMid-block
+        padding: 30px 0 0px 0
+    .page__text-18-Regular-grey
+        margin-top: 90px
+        display: flex
+        justify-content: center
+.footer-wrapper
+    display: flex
+    justify-content: space-around
+    +fabletMid-block
+        flex-direction: column
+    .left
+        display: flex
+        flex-direction: column
+        max-width: 315px
+        +laptopMini-block
+            margin-right: 30px
+        +fabletMid-block
+            margin-bottom: 20px
+        .page__text-18-Regular
+            margin-bottom: vw(20)
+            max-width: 312px
+            +fabletMid-block
+                margin-bottom: 25px
+
+    .row-soc
+        display: flex
+        align-items: center
+        .page__img
+            margin-right: 20px
+    .mid-left
+        display: flex
+        flex-direction: column
+        max-width: 170px
+        +laptopMini-block
+            margin-right: 50px
+        +fabletMid-block
+            margin-bottom: 35px
+    .mid-right
+        +laptopMini-block
+            margin-right: 50px
+        +fabletMid-block
+            margin-bottom: 35px
+    .right
+        +laptopMini-block
+
+    .page__text-24-Medium
+        margin-bottom: 25px
+    .row-call-us
+        display: flex
+        margin-bottom: 28px
+        .page__img
+            margin-right: 13px
+
 .best-freelancers
     padding-top: 280px
+    +ipad-block
+        padding-top: 0
 .best-freelancers-wrapper
     display: flex
     justify-content: space-evenly
+    +laptopMini-block
+        flex-direction: column
     .left
         width: 45%
         position: relative
+
+        +laptopMini-block
+            width: 100%
+        +smM-block
+            display: none
+        +xs-block
+            display: none
+        .page__img
+            +Biggest-block
+                position: relative
+                top: 170px
+                left: 150px
+            +lgs-block
+                top: 0
+                left: 0
+            +laptopMd-block
+                position: relative
+                top: 100px
+
+            +laptopMini-block
+                top: 0px
     .right
         width: 40%
         display: flex
         flex-direction: column
         padding-top: 20px
+        margin-left: 50px
+        +laptopMd-block
+            margin-left: 50px
+        +laptopMini-block
+            width: 100%
+            margin-top: 50px
+            margin-left: 0px
+            justify-content: center
+        +xs-block
+            margin-top: 0
         .page__text-56-Medium
             text-align: right
             margin-bottom: 20px
+            +laptopMini-block
+                text-align: center
+                margin-bottom: 40px
             span
                 color: #1E88E5
         .page__text-24-regular-grey
             max-width: 516px
             align-self: flex-end
             text-align: center
+            +laptopMini-block
+                align-self: center
     .best-freelancers-item-top
         position: absolute
         top: 7%
@@ -82,6 +194,14 @@
             top: 0
         +lg-block
             top: 0
+        +laptopMd-block
+            top: 100px
+        +laptopMdMn-block
+            top: 50px
+        +laptopMini-block
+            top: 0px
+            left: 350px
+
         .page__text-36-Semibold
             color: #1E88E5
             text-align: center
@@ -94,49 +214,27 @@
         display: flex
         flex-direction: column
         align-items: center
+        justify-content: center
         border-radius: 20px
         width: 297px
+        +Biggest-block
+            bottom: 30%
+        +lgs-block
+            bottom: 40%
         +lg-block
             left: 60%
         +laptopM-block
             left: 53%
-            width: 297px
+            bottom: 40%
+        +laptopMd-block
+            bottom: 20%
+        +laptopMdMn-block
+            bottom: 37%
+        +laptopMini-block
+            bottom: 45%
         .page__text-36-Semibold
             color: #1E88E5
             text-align: center
-
-.footer
-    padding: 133px 0 153px
-    .page__text-18-Regular-grey
-        margin-top: 90px
-        display: flex
-        justify-content: center
-.footer-wrapper
-    display: flex
-    justify-content: space-around
-    .left
-        display: flex
-        flex-direction: column
-        max-width: 315px
-        .page__text-18-Regular
-            margin-bottom: vw(20)
-            max-width: 312px
-    .row-soc
-        display: flex
-        align-items: center
-        .page__img
-            margin-right: 20px
-    .mid-left
-        display: flex
-        flex-direction: column
-        max-width: 170px
-    .page__text-24-Medium
-        margin-bottom: 25px
-    .row-call-us
-        display: flex
-        margin-bottom: 28px
-        .page__img
-            margin-right: 13px
 
 .header-wrapper
     display: flex
@@ -146,6 +244,8 @@
     padding: vw(15) vw(20)
     border-radius: vw(50)
 
+    +xs-block
+        padding: 18px 20px
     .page__link
         margin: vw(0) vw(18.5)
         transition: .2s ease-in-out
@@ -156,18 +256,181 @@
     .mid
         display: flex
         align-items: center
-
+        +laptopMini-block
+            display: none
     .page__btn-1
         margin-left: vw(60)
 .header
     padding-top: vw(50)
     background-color: #F2FAFA
 
+.burger
+    display: none
+    margin-right: 20px
+
+    +laptopMini-block
+        display: block
+        transition: 0.6s ease-in-out
+        background-color: transparent
+    +xs-block
+        margin-right: 0
+
+    button
+        background-color: transparent
+        border: transparent
+
+    .icon
+        width: 50px
+        height: 34px
+        position: relative
+        margin-left: 48px
+        cursor: pointer
+        z-index: 4000
+        span
+            display: block
+            position: absolute
+            height: 4px
+            width: 100%
+            border-radius: 9px
+            left: 0
+            transform: rotate(0deg)
+            transition: 0.25 ease
+            color: #fff
+            transition: 0.3s ease-in-out
+            &:nth-child(1)
+                top: 0
+            &::after
+                content: ""
+                position: absolute
+                left: 3px
+                top: 3px
+                display: inline-block
+                width: 48px
+                height: 3px
+                background-color: #00ffff
+                z-index: 5
+
+            &:nth-child(2)
+                top: 13px
+                z-index: 10
+            &::after
+                content: ""
+                display: inline-block
+                position: absolute
+                width: 44px
+                left: 3px
+                top: 3px
+                height: 8px
+                background-color: #00ffff
+                z-index: 5
+                width: 48px
+                height: 3px
+
+            &:nth-child(3)
+                top: 13px
+                height: 3px
+
+            &:nth-child(4)
+                top: 26px
+                z-index: 10
+            &::after
+                content: ""
+                position: absolute
+                left: 3px
+                top: 3px
+                display: inline-block
+                width: 48px
+                height: 3px
+                background-color: #00ffff
+                z-index: 5
+
+        &.active
+            transition: 0.2s ease
+
+            span
+                z-index: 20
+                &:nth-child(1)
+                    top: 18px
+                    width: 0%
+                    left: 50%
+                    z-index: 10
+                    display: none
+                    transition: 0.1s ease-in-out
+
+                &:nth-child(2)
+                    transform: rotate(45deg)
+                    z-index: 10
+                    transition: 0.1s ease-in-out
+                    &::after
+                        top: 2px
+
+                &:nth-child(3)
+                    transform: rotate(-43deg)
+                    z-index: 10
+                    transition: 0.1s ease-in-out
+                    background-color: #00ffff
+                    top: 15px
+                    right: 2px
+                    &::after
+                        display: none
+                        transition: 0.1s ease-in-out
+
+                &:nth-child(4)
+                    top: 18px
+                    width: 0%
+                    left: 50%
+                    z-index: 10
+                    transition: 0.1s ease-in-out
+
+                    &::after
+                        display: none
+
+                        transition: 0.1s ease-in-out
+
+    .other
+        display: none
+        position: fixed
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        z-index: 3000
+        background: rgba(39, 39, 39, 0.6)
+    .inner
+        height: 100%
+        width: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        overflow-x: hidden
+        background: #000
+        transition: all 1s ease
+        .page__text-20-regular
+            color: #fff
+        button
+            background: #1E88E5
+            margin: 0 auto
+            margin-top: 20px
+        .mb20
+            margin-bottom: 20px
+        .nav-center
+            display: flex
+            flex-direction: column
+            align-items: center
+
+        &.active
+            opacity: 1
+
 .freelance-works
     padding-top: 170px
     padding-bottom: 73px
     min-width: 0px
     position: relative
+    +laptopMini-block
+        padding-top: 100px
+        padding-bottom: 43px
+    +xs-block
+        padding-top: 70px
     span
         color: #1E88E5
         min-width: 0
@@ -183,7 +446,9 @@
     min-width: 0px
     max-width: 1300px
     margin: 0 auto
-
+    .slick-arrow
+        +xs-block
+            display: none!important
     .slick-list
         overflow: hidden
 
@@ -242,7 +507,11 @@
     border-radius: 50%
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
     transition: .2s ease-in-out
+    +ipad-block
+        display: none!important
 
+    +xs-block
+        display: none!important
     img
         position: relative
         left: 13px
@@ -264,11 +533,16 @@
     height: 62px
     position: absolute
     top: 18%
-    right: 15%
+    right: 18%
     z-index: 100
     border-radius: 50%
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.1)
     transition: .2s ease-in-out
+    +ipad-block
+        display: none!important
+
+    +xs-block
+        display: none!important
     img
         position: relative
         left: 13px

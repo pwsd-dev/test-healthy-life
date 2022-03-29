@@ -8,6 +8,8 @@
     max-width: calc(100vw - 120px)
   +lgs-block
     max-width: calc(100vw - 120px)
+  +xs-block
+    max-width: calc(100vw - 20px)
   // +sm-block
   //   max-width: 1200px
 @font-face
@@ -35,6 +37,8 @@
 body
   font-family: $fontRegular
   background: #fff
+  &.modal-open
+    overflow: hidden
 
 a, button
   cursor: pointer

@@ -6,10 +6,14 @@ $break_tv: 2570px
 $break_lgs: 1945px
 $break_lg: 1562px
 $break_laptopM: 1445px
-$break_laptopMini: 1200px
+$break_laptopMd: 1390px
+$break_laptopMdMn: 1300px
+$break_laptopMini: 1250px
 $break_ipad: 1024px
 $break_md: 992px
+$break_fabletMid: 840px
 $break_sm: 768px
+$break_smM: 668px
 $break_xs: 578px
 
 $offset: 18px
@@ -18,10 +22,14 @@ $offset_tv: $offset
 $offset_lgs: $offset
 $offset_lg: $offset
 $offset_laptopM: $offset
+$offset_laptopMd: $offset
+$offset_laptopMdMn: $offset
 $offset_laptopMini: $offset
 $offset_ipad: $offset
 $offset_md: $offset
+$offset_fabletMid: $offset
 $offset_sm: $offset
+$offset_smM: $offset
 $offset_xs: $offset
 
 $offset_one_side: ($offset / 2)
@@ -30,14 +38,19 @@ $offset_tv_one_side: ($offset_tv / 2)
 $offset_lgs_one_side: ($offset_lgs / 2)
 $offset_lg_one_side: ($offset_lg / 2)
 $offset_laptopM_one_side: ($offset_laptopM / 2)
+$offset_laptopMd_one_side: ($offset_laptopMd / 2)
+$offset_laptopMdMn_one_side: ($offset_laptopMdMn / 2)
 $offset_laptopMini_one_side: ($offset_laptopMini / 2)
 $offset_ipad_one_side: ($offset_ipad / 2)
 $offset_md_one_side: ($offset_md / 2)
+$offset_fabletMid_one_side: ($offset_fabletMid / 2)
 $offset_sm_one_side: ($offset_sm / 2)
+$offset_smM_one_side: ($offset_smM / 2)
 $offset_xs_one_side: ($offset_xs / 2)
 
 $fields: 18px
 $fields_sm: 15px
+$fields_smM: 15px
 
 =wrapper-full()
     padding-left: $fields
@@ -46,6 +59,10 @@ $fields_sm: 15px
     +sm-block()
         padding-left: $fields_sm
         padding-right: $fields_sm
+
+    +smM-block()
+        padding-left: $fields_smM
+        padding-right: $fields_smM
 
 =row-offsets()
     margin-left: ($offset_one_side * -1)
@@ -112,6 +129,14 @@ $fields_sm: 15px
     $val: 100% / $columns * $n
     +laptopM(width, #{calc(#{$val} - #{$offset_laptopM})})
 
+=size-laptopMd($n)
+    $val: 100% / $columns * $n
+    +laptopMd(width, #{calc(#{$val} - #{$offset_laptopMd})})
+
+=size-laptopMdMn($n)
+    $val: 100% / $columns * $n
+    +laptopMdMn(width, #{calc(#{$val} - #{$offset_laptopMdMn})})
+
 =size-laptopMini($n)
     $val: 100% / $columns * $n
     +laptopMini(width, #{calc(#{$val} - #{$offset_laptopMini})})
@@ -124,9 +149,17 @@ $fields_sm: 15px
     $val: 100% / $columns * $n
     +md(width, #{calc(#{$val} - #{$offset_md})})
 
+=size-fabletMid($n)
+    $val: 100% / $columns * $n
+    +fabletMid(width, #{calc(#{$val} - #{$offset_fabletMid})})
+
 =size-sm($n)
     $val: 100% / $columns * $n
     +sm(width, #{calc(#{$val} - #{$offset_sm})})
+
+=size-smM($n)
+    $val: 100% / $columns * $n
+    +smM(width, #{calc(#{$val} - #{$offset_smM})})
 
 =size-xs($n)
     $val: 100% / $columns * $n
@@ -288,6 +321,58 @@ $fields_sm: 15px
     $val: 100% / $columns * $n
     +laptopM(padding-right, #{calc(#{$val} + #{$offset_laptopM_one_side})})
 
+=shift-laptopMd($n)
+    $val: 100% / $columns * $n
+    +laptopMd(margin-left, #{calc(#{$val} + #{$offset_laptopMd_one_side})})
+    +laptopMd(margin-right, #{calc(#{$val} + #{$offset_laptopMd_one_side})})
+
+=shift-laptopMd-left($n)
+    $val: 100% / $columns * $n
+    +laptopMd(margin-left, #{calc(#{$val} + #{$offset_laptopMd_one_side})})
+
+=shift-laptopMd-right($n)
+    $val: 100% / $columns * $n
+    +laptopMd(margin-right, #{calc(#{$val} + #{$offset_laptopMd_one_side})})
+
+=shift-laptopMd-padding($n)
+    $val: 100% / $columns * $n
+    +laptopMd(padding-left, #{calc(#{$val} + #{$offset_laptopMd_one_side})})
+    +laptopMd(padding-right, #{calc(#{$val} + #{$offset_laptopMd_one_side})})
+
+=shift-laptopMd-padding-left($n)
+    $val: 100% / $columns * $n
+    +laptopMd(padding-left, #{calc(#{$val} + #{$offset_laptopMd_one_side})})
+
+=shift-laptopMd-padding-right($n)
+    $val: 100% / $columns * $n
+    +laptopMd(padding-right, #{calc(#{$val} + #{$offset_laptopMd_one_side})})
+
+=shift-laptopMdMn($n)
+    $val: 100% / $columns * $n
+    +laptopMdMn(margin-left, #{calc(#{$val} + #{$offset_laptopMdMn_one_side})})
+    +laptopMdMn(margin-right, #{calc(#{$val} + #{$offset_laptopMdMn_one_side})})
+
+=shift-laptopMdMn-left($n)
+    $val: 100% / $columns * $n
+    +laptopMdMn(margin-left, #{calc(#{$val} + #{$offset_laptopMdMn_one_side})})
+
+=shift-laptopMdMn-right($n)
+    $val: 100% / $columns * $n
+    +laptopMdMn(margin-right, #{calc(#{$val} + #{$offset_laptopMdMn_one_side})})
+
+=shift-laptopMdMn-padding($n)
+    $val: 100% / $columns * $n
+    +laptopMdMn(padding-left, #{calc(#{$val} + #{$offset_laptopMdMn_one_side})})
+    +laptopMdMn(padding-right, #{calc(#{$val} + #{$offset_laptopMdMn_one_side})})
+
+=shift-laptopMdMn-padding-left($n)
+    $val: 100% / $columns * $n
+    +laptopMdMn(padding-left, #{calc(#{$val} + #{$offset_laptopMdMn_one_side})})
+
+=shift-laptopMdMn-padding-right($n)
+    $val: 100% / $columns * $n
+    +laptopMdMn(padding-right, #{calc(#{$val} + #{$offset_laptopMdMn_one_side})})
+
 =shift-laptopMini($n)
     $val: 100% / $columns * $n
     +laptopMini(margin-left, #{calc(#{$val} + #{$offset_laptopMini_one_side})})
@@ -366,6 +451,32 @@ $fields_sm: 15px
     $val: 100% / $columns * $n
     +md(padding-right, #{calc(#{$val} + #{$offset_md_one_side})})
 
+=shift-fabletMid($n)
+    $val: 100% / $columns * $n
+    +fabletMid(margin-left, #{calc(#{$val} + #{$offset_fabletMid_one_side})})
+    +fabletMid(margin-right, #{calc(#{$val} + #{$offset_fabletMid_one_side})})
+
+=shift-fabletMid-left($n)
+    $val: 100% / $columns * $n
+    +fabletMid(margin-left, #{calc(#{$val} + #{$offset_fabletMid_one_side})})
+
+=shift-fabletMid-right($n)
+    $val: 100% / $columns * $n
+    +fabletMid(margin-right, #{calc(#{$val} + #{$offset_fabletMid_one_side})})
+
+=shift-fabletMid-padding($n)
+    $val: 100% / $columns * $n
+    +fabletMid(padding-left, #{calc(#{$val} + #{$offset_fabletMid_one_side})})
+    +fabletMid(padding-right, #{calc(#{$val} + #{$offset_fabletMid_one_side})})
+
+=shift-fabletMid-padding-left($n)
+    $val: 100% / $columns * $n
+    +fabletMid(padding-left, #{calc(#{$val} + #{$offset_fabletMid_one_side})})
+
+=shift-fabletMid-padding-right($n)
+    $val: 100% / $columns * $n
+    +fabletMid(padding-right, #{calc(#{$val} + #{$offset_fabletMid_one_side})})
+
 =shift-sm($n)
     $val: 100% / $columns * $n
     +sm(margin-left, #{calc(#{$val} + #{$offset_sm_one_side})})
@@ -391,6 +502,32 @@ $fields_sm: 15px
 =shift-sm-padding-right($n)
     $val: 100% / $columns * $n
     +sm(padding-right, #{calc(#{$val} + #{$offset_sm_one_side})})
+
+=shift-smM($n)
+    $val: 100% / $columns * $n
+    +smM(margin-left, #{calc(#{$val} + #{$offset_smM_one_side})})
+    +smM(margin-right, #{calc(#{$val} + #{$offset_smM_one_side})})
+
+=shift-smM-left($n)
+    $val: 100% / $columns * $n
+    +smM(margin-left, #{calc(#{$val} + #{$offset_smM_one_side})})
+
+=shift-smM-right($n)
+    $val: 100% / $columns * $n
+    +smM(margin-right, #{calc(#{$val} + #{$offset_smM_one_side})})
+
+=shift-smM-padding($n)
+    $val: 100% / $columns * $n
+    +smM(padding-left, #{calc(#{$val} + #{$offset_smM_one_side})})
+    +smM(padding-right, #{calc(#{$val} + #{$offset_smM_one_side})})
+
+=shift-smM-padding-left($n)
+    $val: 100% / $columns * $n
+    +smM(padding-left, #{calc(#{$val} + #{$offset_smM_one_side})})
+
+=shift-smM-padding-right($n)
+    $val: 100% / $columns * $n
+    +smM(padding-right, #{calc(#{$val} + #{$offset_smM_one_side})})
 
 =shift-xs($n)
     $val: 100% / $columns * $n
@@ -458,6 +595,22 @@ $fields_sm: 15px
     @media screen and (max-width: $break_laptopM)
         @content
 
+=laptopMd($name, $value)
+    @media screen and (max-width: $break_laptopMd)
+        #{$name}: $value
+
+=laptopMd-block()
+    @media screen and (max-width: $break_laptopMd)
+        @content
+
+=laptopMdMn($name, $value)
+    @media screen and (max-width: $break_laptopMdMn)
+        #{$name}: $value
+
+=laptopMdMn-block()
+    @media screen and (max-width: $break_laptopMdMn)
+        @content
+
 =laptopMini($name, $value)
     @media screen and (max-width: $break_laptopMini)
         #{$name}: $value
@@ -482,12 +635,28 @@ $fields_sm: 15px
     @media screen and (max-width: $break_md)
         @content
 
+=fabletMid($name, $value)
+    @media screen and (max-width: $break_fabletMid)
+        #{$name}: $value
+
+=fabletMid-block()
+    @media screen and (max-width: $break_fabletMid)
+        @content
+
 =sm($name, $value)
     @media screen and (max-width: $break_sm)
         #{$name}: $value
 
 =sm-block()
     @media screen and (max-width: $break_sm)
+        @content
+
+=smM($name, $value)
+    @media screen and (max-width: $break_smM)
+        #{$name}: $value
+
+=smM-block()
+    @media screen and (max-width: $break_smM)
         @content
 
 =xs($name, $value)
